@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão Interativo</title>
+</head>
+<body>
+    <h1>Criando Interatividade</h1>
+    <button id="btn">Me aperte</button>
+    <script>
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click", action);
+        function action(){
+            alert("Botão Clicado");
+        }
+    </script>
+    
+</body>
+</html>
