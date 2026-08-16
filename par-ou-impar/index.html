@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou Impar</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Par ou Impar?</h1>
+            <p>Digite um número para saber se é par ou ímpar.</p>
+            <input type="number" id="number" placeholder="Digite um número" required>
+            <button id="btn">Verificar</button>
+            <p>O número <span id="clone"> </span> é: <span id="parOuImpar"></span></p>
+
+            <script>
+                const numeroDigitado = Number(document.getElementById("number").value); //correção: recisa acontecer dentro do check
+                btn.addEventListener("click", check, show);
+                function check(){
+                    const result = (numeroDigitado % 2);
+                    if (result == 0){
+                        return "Par"; //erro: o evento para após o return, então a lógica está errada.
+                    } else {
+                        return "Impar";
+                    }
+                    document.getElementById("parOuImpar").textContent = check;
+                };
+                function show(){
+                    return numeroDigitado;
+                    document.getElementById("clone").textContent = show;
+                }
+            </script> <!--Está cheio de erros de lógica e manipulação do DOM. Precisa ser corrigido-->
+        </section>
+    </main>
+    
+</body>
+</html>
