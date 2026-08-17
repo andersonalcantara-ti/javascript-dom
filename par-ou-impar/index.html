@@ -3,34 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Par ou Impar</title>
+    <title>Par ou Impar</title> <!--Escrevi ímpar sem acento propositalmente-->
 </head>
 <body>
     <main>
         <section>
-            <h1>Par ou Impar?</h1>
+            <h1>Par ou Ímpar?</h1>
             <p>Digite um número para saber se é par ou ímpar.</p>
             <input type="number" id="number" placeholder="Digite um número" required>
-            <button id="btn">Verificar</button>
-            <p>O número <span id="clone"> </span> é: <span id="parOuImpar"></span></p>
+            <button id="verificar">Verificar</button>
+            <p>O número <span id="clone"> </span> é: <span id="parOuImpar"></span>!</p>
 
             <script>
-                const numeroDigitado = Number(document.getElementById("number").value); //correção: recisa acontecer dentro do check
-                btn.addEventListener("click", check, show);
-                function check(){
-                    const result = (numeroDigitado % 2);
-                    if (result == 0){
-                        return "Par"; //erro: o evento para após o return, então a lógica está errada.
+                const btn = document.getElementById("verificar");
+                btn.addEventListener("click", verificar);
+                function verificar(){
+                    const numeroDigitado = Number(document.getElementById("number").value);
+                    const calculo = (numeroDigitado % 2);
+                    if (calculo == 0){
+                        document.getElementById("parOuImpar").textContent = "Par"
                     } else {
-                        return "Impar";
+                        document.getElementById("parOuImpar").textContent = "Ímpar"
                     }
-                    document.getElementById("parOuImpar").textContent = check;
-                };
-                function show(){
-                    return numeroDigitado;
-                    document.getElementById("clone").textContent = show;
+                    document.getElementById("clone").textContent = numeroDigitado;
                 }
-            </script> <!--Está cheio de erros de lógica e manipulação do DOM. Precisa ser corrigido-->
+            </script>
         </section>
     </main>
     
