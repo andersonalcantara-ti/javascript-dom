@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color</title>
+</head>
+<body id="b">
+    <h1>Mudando Cor com JS</h1>
+    <style>
+        #b {background-color: blanchedalmond;}
+    </style>
+    <button id="btn">Change Color</button>
+    
+    <script>
+        btn.addEventListener("click", changeColor);
+        function changeColor(){
+            const btn = document.getElementById("btn");
+            console.log("Clicado");
+            document.querySelector("#b").style.backgroundColor = "lightblue"
+        }
+    </script> 
+    <!--Precisa corrigir redundancias e mellhorar o código. Aplicar boas práticas-->
+    
+</body>
+</html>
